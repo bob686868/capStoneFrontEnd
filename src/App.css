@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-dark-green: #495E57;
+  --color-accent-yellow: #F4CE14;
+  --color-light-gray: #edefee;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-o: #ee9972
+}
+
+@layer utilities {
+  .g {
+    color: var(--color-primary-dark-green);
+  }
+  .bgg{
+    background-color: var(--color-primary-dark-green);
+  }
+  .bgy{
+    background-color:var(--color-accent-yellow)
+  }
+  .bgGray{
+    background-color:var(--color-light-gray)
+  }
+
+  body {
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+  }
+
+  .smF {
+    font-size: clamp(16px, 5vw, 22px);
+  }
+
+  .mdF {
+    font-size: clamp(25px, 1vw, 38px);
+  }
+
+  .lgF {
+    font-size: clamp(54px, 5vw, 64px)
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
